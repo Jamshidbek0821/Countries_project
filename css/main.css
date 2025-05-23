@@ -1,0 +1,17 @@
+
+
+.containers {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.site-header {
+    box-shadow: 0px 2px 4px 0px #0000000E;
+
+}
+.search-input {
+    background-image: url(../images/search.svg);
+    background-repeat: no-repeat;
+    background-position: 32px center;
+}
+

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countries</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <style type="text/tailwindcss">
+    </style>
+</head>
+
+<body>
+    <header class="bg-white py-[23px] site-header">
+        <div class="containers flex justify-between">
+            <h1 class="font-extrabold text-[24px]">Where in the world?</h1>
+            <div class=" flex items-center gap-[20px]">
+                <button onclick="handleLikeBtnClick()"
+                    class="flex items-center rounded-md gap-[5px] cursor-pointer p-3 border-[2px] border-[#111517]">
+                    <span class="like-icon">
+                        <svg class="text-black" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                            fill="currentColor" viewBox="0 0 16 16">
+                            <path
+                                d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+                        </svg>
+                    </span>
+                    Liked (<span class="like-count">0</span>)
+                </button>
+                <button onclick="handleSaveBtnClick()"
+                    class="flex items-center rounded-md gap-[5px] cursor-pointer p-3 border-[2px] border-[#111517]">
+                    <span class="save-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="black"
+                            stroke-width="1.5" viewBox="0 0 16 16">
+                            <path d="M2 2h12v13.5l-6-3.25-6 3.25z" />
+                        </svg>
+                    </span>
+                    Saved (<span class="save-count">0</span>)
+                </button>
+                <button
+                    class=" flex items-center rounded-md gap-[5px] cursor-pointer p-3 border-[2px] border-[#111517]"><svg
+                        width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M13.5532 13.815C9.66857 13.815 6.51929 10.9278 6.51929 7.36821C6.51929 6.0253 6.96679 4.78158 7.73143 3.75C4.69036 4.69515 2.5 7.33122 2.5 10.4381C2.5 14.3385 5.94929 17.5 10.2036 17.5C13.5929 17.5 16.4696 15.4932 17.5 12.7045C16.375 13.4048 15.0161 13.815 13.5532 13.815Z"
+                            fill="white" stroke="#111517" stroke-width="1.25" />
+                    </svg>
+                    Dark Mode</button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="pt-[48px]">
+            <div class="containers flex justify-between pb-[48px]">
+                <input
+                    class="w-[480px] search-input py-[17px] pl-[74px] rounded-[5px] outline-none shadow-md focus:shadow-blue-500"
+                    type="text" placeholder="Search for a country…">
+                <select
+                    class="w-[200px] choose-select py-[18px] px-[24px] rounded-[5px] outline-none shadow-md focus:shadow-blue-500">
+                    <option selected disabled value="all">Filter by Capital</option>
+                </select>
+            </div>
+            <div class="containers">
+                <ul class="country-list flex flex-wrap gap-[60px] pt-[48px] pb-[45px]">
+
+                </ul>
+            </div>
+        </section>
+    </main>
+    <script src="./js/countries.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</body>
+
+</html>
